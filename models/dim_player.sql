@@ -6,11 +6,11 @@
 
 }}
 
-with teams as (
+with players as (
 
     select *
-    from {{ ref('stg_kaggle__teams') }}
+    from {{ ref('stg_espn__players') }}
 
 )
 
-select * from teams
+select * from players
