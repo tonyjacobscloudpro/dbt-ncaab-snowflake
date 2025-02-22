@@ -38,3 +38,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   ncaab:
     # Applies to all files under models/example/
+    marts: 
+      materialized: table
+    staging:
+      materialized: view

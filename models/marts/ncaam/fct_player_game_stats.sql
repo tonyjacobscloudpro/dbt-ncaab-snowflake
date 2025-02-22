@@ -1,11 +1,3 @@
-{{
-
-    config(
-        materialized='table'
-    )
-
-}}
-
 select p.playerid,t.teamid,s.* 
 from {{ ref('stg_espn_fct__player_game_stats') }} s
 left join {{ ref('stg_espn__players') }} p 
