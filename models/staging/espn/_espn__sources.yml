@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: espn
+    database: raw  
+    schema: espn
+    tables:
+      - name: ncaam_daily_stats
+
+  - name: kaggle
+    tables:
+      - name: MNCAATOURNEYDETAILEDRESULTS
+      - name: MREGULARSEASONDETAILEDRESULTS
+      - name: MTEAMS

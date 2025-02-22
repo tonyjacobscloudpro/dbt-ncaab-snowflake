@@ -15,7 +15,7 @@ select distinct gameid
     ,turnover
     ,pf
     ,pts
-from RAW.ESPN.NCAAM_DAILY_STATS
+from {{ source('espn', 'ncaam_daily_stats') }}
 
 
 
