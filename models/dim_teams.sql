@@ -9,7 +9,7 @@
 with teams as (
 
     select *
-    from {{ ref('stg_kaggle__teams') }}
+    from {{ ref('stg_espn__teams') }}
 
 )
 
