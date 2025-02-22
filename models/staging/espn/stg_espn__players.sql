@@ -7,5 +7,5 @@ select
     jersey
 from (
     select distinct player, team, jersey
-    from RAW.ESPN.NCAAM_DAILY_STATS
+    from {{ source('espn', 'ncaam_daily_stats') }}
 ) player
