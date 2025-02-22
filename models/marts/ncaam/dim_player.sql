@@ -1,11 +1,3 @@
-{{
-
-    config(
-        materialized='table'
-    )
-
-}}
-
 with players as (
 
     select *
