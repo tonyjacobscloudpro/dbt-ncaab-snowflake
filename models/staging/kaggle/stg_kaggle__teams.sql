@@ -1,3 +1,3 @@
 select teamid
         ,teamname as team_name
-    from RAW.KAGGLE.MTEAMS
+    from {{ source('kaggle', 'MTEAMS') }}
