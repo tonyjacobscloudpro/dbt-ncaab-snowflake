@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: kaggle
+    database: raw  
+    schema: kaggle
+    tables:
+      - name: MNCAATOURNEYDETAILEDRESULTS
+      - name: MREGULARSEASONDETAILEDRESULTS
+      - name: MTEAMS
