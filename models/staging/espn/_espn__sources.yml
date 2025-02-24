@@ -6,9 +6,22 @@ sources:
     schema: espn
     tables:
       - name: ncaam_daily_stats
+        loaded_at_field: _etl_loaded_at
+        freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 24, period: hour}
+      - name: ncaam_daily_game_results
+        loaded_at_field: widget_date
+        freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 24, period: hour}
 
   - name: kaggle
     tables:
       - name: MNCAATOURNEYDETAILEDRESULTS
       - name: MREGULARSEASONDETAILEDRESULTS
       - name: MTEAMS
+
+  - name: seeds
+    tables:
+      - name: seed_ncaam_schools

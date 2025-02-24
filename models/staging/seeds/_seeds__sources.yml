@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: seeds
+    database: raw  
+    schema: seeds
+    tables:
+      - name: seed_ncaam_schools
