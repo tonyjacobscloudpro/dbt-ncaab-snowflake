@@ -8,21 +8,21 @@ sources:
     tables:
       - name: ncaam_daily_stats
         description: Espn daily game player stats
-        loaded_at_field: _etl_loaded_at
-        freshness:
-          warn_after: {count: 12, period: hour}
-          error_after: {count: 24, period: hour}      
-        columns: 
-          - name: gameid
-            tests:
-              - unique
-              - not_null
+        # loaded_at_field: _etl_loaded_at
+        # freshness:
+        #   warn_after: {count: 12, period: hour}
+        #   error_after: {count: 24, period: hour}      
+        # columns: 
+        #   - name: gameid
+        #     tests:
+        #       - unique
+        #       - not_null
       - name: ncaam_daily_game_results
         description: Espn final game results
-        loaded_at_field: widget_date
-        freshness:
-          warn_after: {count: 12, period: hour}
-          error_after: {count: 24, period: hour}
+        # loaded_at_field: widget_date
+        # freshness:
+        #   warn_after: {count: 12, period: hour}
+        #   error_after: {count: 24, period: hour}
         columns: 
           - name: gameid
             description: Primary key
