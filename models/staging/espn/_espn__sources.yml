@@ -2,18 +2,38 @@ version: 2
 
 sources:
   - name: espn
+    description: Staged data from espn scrape
     database: raw  
     schema: espn
     tables:
       - name: ncaam_daily_stats
+        description: Espn daily game player stats
         loaded_at_field: _etl_loaded_at
         freshness:
           warn_after: {count: 12, period: hour}
-          error_after: {count: 24, period: hour}
+          error_after: {count: 24, period: hour}      
+        columns: 
+          - name: gameid
+            tests:
+              - unique
+              - not_null
       - name: ncaam_daily_game_results
+        description: Espn final game results
         loaded_at_field: widget_date
         freshness:
           warn_after: {count: 12, period: hour}
           error_after: {count: 24, period: hour}
+        columns: 
+          - name: gameid
+            description: Primary key
+            tests:
+              - not_null
+          - name: home_team_id
+            tests:
+              - not_null
+          - name: home_away_id
+            tests:
+              - not_null
+          
 
  

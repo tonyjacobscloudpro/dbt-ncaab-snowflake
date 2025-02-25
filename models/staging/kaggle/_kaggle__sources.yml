@@ -2,9 +2,13 @@ version: 2
 
 sources:
   - name: kaggle
+    description: Kaggle competition data
     database: raw  
     schema: kaggle
     tables:
       - name: MNCAATOURNEYDETAILEDRESULTS
+        description: NCAAM tournament detailed results.
       - name: MREGULARSEASONDETAILEDRESULTS
+        description: NCAAM regular season detailed results.
       - name: MTEAMS
+        description: NCAAM teams
