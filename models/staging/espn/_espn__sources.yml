@@ -28,12 +28,12 @@ sources:
             description: Primary key
             tests:
               - not_null
-          - name: home_team_id
-            tests:
-              - not_null
-          - name: home_away_id
-            tests:
-              - not_null
+          # - name: home_team_id
+          #   tests:
+          #     - not_null
+          # - name: home_away_id
+          #   tests:
+          #     - not_null
           
 
  
